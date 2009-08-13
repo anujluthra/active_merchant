@@ -131,7 +131,7 @@ module ActiveMerchant
     end
         
     def retry_exceptions
-      retries = MAX_RETRIES
+      retries = 1 #MAX_RETRIES
       begin
         yield
       rescue RetriableConnectionError => e
